@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administration — Portfolio Landry</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="loginScreen" class="admin_login_ecran">
+  <form id="loginForm" class="admin_login_boite">
+    <h2>&lt;Landry/&gt; Admin</h2>
+    <input type="password" id="password" placeholder="Mot de passe" required>
+    <button type="submit">Se connecter</button>
+    <p id="loginError" class="admin_erreur"></p>
+  </form>
+</div>
+
+<div id="dashboard" class="admin_dashboard" style="display:none;">
+  <header class="admin_header">
+    <h1>&lt;Landry/&gt; Administration</h1>
+    <button id="btn_logout">Déconnexion</button>
+  </header>
+
+  <nav class="admin_tabs">
+    <button class="admin_tab_btn actif" data-tab="general">Général</button>
+    <button class="admin_tab_btn" data-tab="projets">Projets</button>
+    <button class="admin_tab_btn" data-tab="formations">Formations</button>
+    <button class="admin_tab_btn" data-tab="experiences">Expériences</button>
+    <button class="admin_tab_btn" data-tab="certifications">Certifications</button>
+    <button class="admin_tab_btn" data-tab="competences">Compétences</button>
+  </nav>
+
+  <!-- GENERAL -->
+  <section id="tab_general" class="admin_tab_contenu">
+    <form id="formGeneral" class="admin_form_general">
+      <h2>Identité & Logo</h2>
+      <label>Nom affiché dans la nav</label>
+      <input type="text" id="champ_nom_identite">
+      <label>Logo actuel</label>
+      <img id="apercu_logo" class="admin_apercu_mini">
+      <input type="file" id="inputLogo" accept="image/*">
+
+      <h2>Section Hero</h2>
+      <label>Nom 1</label><input type="text" id="champ_nom1">
+      <label>Nom 2 (dégradé)</label><input type="text" id="champ_nom2">
+      <label>Nom 3</label><input type="text" id="champ_nom3">
+      <label>Nom 4</label><input type="text" id="champ_nom4">
+      <label>Bulle du haut</label><input type="text" id="champ_texte_haut">
+      <label>Bulle du bas</label><input type="text" id="champ_texte_bas">
+      <label>Phrases du typewriter (une par ligne)</label>
+      <textarea id="champ_phrases" rows="4"></textarea>
+      <label>Photo actuelle</label>
+      <img id="apercu_photo" class="admin_apercu_mini">
+      <input type="file" id="inputPhoto" accept="image/*">
+
+      <h2>Contact</h2>
+      <label>Texte d'intro contact</label>
+      <textarea id="champ_contact_texte" rows="3"></textarea>
+      <label>Lien GitHub</label><input type="text" id="champ_github">
+      <label>Lien LinkedIn</label><input type="text" id="champ_linkedin">
+      <label>Email</label><input type="text" id="champ_email">
+
+      <button type="submit" class="admin_btn_principal">Enregistrer le Général</button>
+    </form>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="tab_projets" class="admin_tab_contenu" style="display:none;">
+    <div class="admin_liste_actions">
+      <button id="btn_ajouter_projets" class="admin_btn_ajouter">+ Ajouter un projet</button>
+      <button id="btn_save_projets" class="admin_btn_principal">Enregistrer les projets</button>
+    </div>
+    <div id="liste_projets"></div>
+  </section>
+
+  <!-- FORMATIONS -->
+  <section id="tab_formations" class="admin_tab_contenu" style="display:none;">
+    <div class="admin_liste_actions">
+      <button id="btn_ajouter_formations" class="admin_btn_ajouter">+ Ajouter une formation</button>
+      <button id="btn_save_formations" class="admin_btn_principal">Enregistrer les formations</button>
+    </div>
+    <div id="liste_formations"></div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section id="tab_experiences" class="admin_tab_contenu" style="display:none;">
+    <div class="admin_liste_actions">
+      <button id="btn_ajouter_experiences" class="admin_btn_ajouter">+ Ajouter une expérience</button>
+      <button id="btn_save_experiences" class="admin_btn_principal">Enregistrer les expériences</button>
+    </div>
+    <div id="liste_experiences"></div>
+  </section>
+    <!-- COMPETENCES -->
+  <section id="tab_competences" class="admin_tab_contenu" style="display:none;">
+    <div class="admin_liste_actions">
+      <button id="btn_ajouter_categorie_comp" class="admin_btn_ajouter">+ Ajouter une catégorie</button>
+      <button id="btn_save_competences" class="admin_btn_principal">Enregistrer les compétences</button>
+    </div>
+    <div id="liste_competences"></div>
+  </section>
+  <!-- CERTIFICATIONS -->
+  <section id="tab_certifications" class="admin_tab_contenu" style="display:none;">
+    <div class="admin_liste_actions">
+      <button id="btn_ajouter_certifications" class="admin_btn_ajouter">+ Ajouter une certification</button>
+      <button id="btn_save_certifications" class="admin_btn_principal">Enregistrer les certifications</button>
+    </div>
+    <div id="liste_certifications"></div>
+  </section>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

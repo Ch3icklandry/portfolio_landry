@@ -1,0 +1,103 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #05050a;
+  color: #e5e7eb;
+  font-family: 'Courier New', monospace;
+}
+
+.admin_login_ecran {
+  display: flex; align-items: center; justify-content: center;
+  height: 100vh;
+}
+.admin_login_boite {
+  background: #0d1117;
+  border: 1px solid #00ff88;
+  border-radius: 12px;
+  padding: 40px;
+  width: 320px;
+  display: flex; flex-direction: column; gap: 14px;
+  box-shadow: 0 0 30px rgba(0,255,136,0.2);
+}
+.admin_login_boite h2 { color: #00ff88; text-align: center; margin: 0 0 10px; }
+.admin_login_boite input {
+  background: #161b22; border: 1px solid #333; border-radius: 8px;
+  padding: 10px; color: #fff; font-family: inherit;
+}
+.admin_login_boite button {
+  background: #00ff88; color: #000; border: none; border-radius: 8px;
+  padding: 10px; font-weight: bold; cursor: pointer;
+}
+.admin_erreur { color: #ff4d4d; font-size: 13px; text-align: center; margin: 0; }
+
+.admin_header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 30px; border-bottom: 1px solid #1e2530;
+}
+.admin_header h1 { color: #00ff88; font-size: 20px; margin: 0; }
+.admin_header button {
+  background: transparent; border: 1px solid #ff4d4d; color: #ff4d4d;
+  padding: 8px 16px; border-radius: 8px; cursor: pointer;
+}
+
+.admin_tabs {
+  display: flex; gap: 10px; flex-wrap: wrap; padding: 20px 30px;
+  border-bottom: 1px solid #1e2530;
+}
+.admin_tab_btn {
+  background: #0d1117; border: 1px solid #1e2530; color: #9aa5ac;
+  padding: 10px 18px; border-radius: 8px; cursor: pointer; font-family: inherit;
+}
+.admin_tab_btn.actif { border-color: #00ff88; color: #00ff88; }
+
+.admin_tab_contenu { padding: 30px; max-width: 900px; margin: 0 auto; }
+
+.admin_form_general { display: flex; flex-direction: column; gap: 10px; }
+.admin_form_general h2 { color: #00cfff; margin-top: 20px; }
+.admin_form_general label, .admin_champ label {
+  color: #9aa5ac; font-size: 13px; margin-top: 8px;
+}
+.admin_form_general input, .admin_form_general textarea,
+.admin_champ input, .admin_champ textarea, .admin_champ select {
+  background: #161b22; border: 1px solid #333; border-radius: 8px;
+  padding: 10px; color: #fff; font-family: inherit; width: 100%;
+}
+
+.admin_apercu_mini {
+  width: 100px; height: 100px; object-fit: cover;
+  border-radius: 8px; border: 1px solid #00ff88; margin: 6px 0;
+}
+
+.admin_btn_principal {
+  background: #00ff88; color: #000; border: none; border-radius: 8px;
+  padding: 12px 20px; font-weight: bold; cursor: pointer; margin-top: 20px;
+}
+.admin_btn_ajouter {
+  background: transparent; border: 1px solid #00cfff; color: #00cfff;
+  padding: 10px 16px; border-radius: 8px; cursor: pointer;
+}
+.admin_liste_actions { display: flex; justify-content: space-between; margin-bottom: 20px; }
+
+.admin_item_carte {
+  background: #0d1117; border: 1px solid #1e2530; border-radius: 12px;
+  padding: 20px; margin-bottom: 20px;
+}
+.admin_champ { margin-bottom: 12px; }
+.admin_btn_supprimer {
+  background: transparent; border: 1px solid #ff4d4d; color: #ff4d4d;
+  padding: 8px 14px; border-radius: 8px; cursor: pointer; margin-top: 10px;
+}
+.admin_item_competence {
+  display: flex; gap: 8px; align-items: center; margin-bottom: 8px;
+}
+.admin_item_competence input {
+  background: #161b22; border: 1px solid #333; border-radius: 6px;
+  padding: 8px; color: #fff; font-family: inherit;
+}
+.admin_item_competence input:nth-child(1) { flex: 2; }
+.admin_item_competence input:nth-child(2) { flex: 3; }
+.admin_item_competence input:nth-child(3) { flex: 1; width: 70px; }
+.admin_btn_supprimer_mini {
+  background: transparent; border: 1px solid #ff4d4d; color: #ff4d4d;
+  border-radius: 6px; padding: 6px 10px; cursor: pointer; flex-shrink: 0;
+}

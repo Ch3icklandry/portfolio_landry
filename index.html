@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Portfolio de Landry</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" type="image/png" href="icone.png">
+<!-- Lien pour les icônes FontAwesome (à mettre dans le <head>) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+
+/* --- ALIGNEMENT DES LOGOS DANS LES COMPÉTENCES --- */
+.conteneur_comp li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.conteneur_comp li i {
+    width: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #4CAF50; /* Tu peux changer la couleur selon ton thème */
+}
+
+.conteneur_comp span {
+    margin-left: auto; /* Aligne les pourcentages (%) à droite */
+}
+</style>
+</head>
+<body>
+
+<!-- Préchargeur -->
+<div class="preloader" id="preloader">
+  <div class="preloader_contenu">
+    <span class="preloader_logo">&lt;Landry/&gt;</span>
+    <div class="preloader_barre"><div class="preloader_barre_remplissage"></div></div>
+    <div class="preloader_texte">&gt;&gt;&gt; chargement du profil...</div>
+  </div>
+</div>
+
+<canvas id="particulesBg"></canvas>
+<div class="scroll_progress" id="scrollProgress"></div>
+
+<nav class='barre_haute_fixe'>
+	<div class="identite">
+		<img src="./img/logo.png" alt="Logo" height="30" class="logo">
+		<div class="affich_nom">Landry <span class="anim">_</span></div>
+	</div>
+	<button class="menu_burger" id="menuBurger" aria-label="Ouvrir le menu" aria-expanded="false">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	<div class="nav_element">
+		<a href="#index">Acceuil</a>
+		<a href="#about">A propos</a>
+		<a href="#Competences">Competences</a>
+		<a href="#projet">Projets</a>
+		<a href="#xp">Experiences</a>
+		<a href="#formation">Parcours/Formation</a>
+		<a href="#certification">certifications</a>
+		<a href="#contact">Me contacter</a>
+
+		<!-- Indicateur Glass Liquide -->
+		<div class="glass-indicator"></div>
+	</div>
+  
+</nav>
+<section id="index" class="page-section">
+	
+
+	<!-- partie a propos-->
+	<!-- partie gauche de a propos-->
+	<div class='about'>
+   
+		<div class='left_about'>
+			
+			<br>
+			<div class="ligne_nom">
+				<span class="nom1">SOME</span>
+				<span class="nom2">Mwinyel</span>
+			</div>
+			<div class="nom3">		
+				Cheick		
+			</div>
+			<div class="nom4">
+				Landry
+			</div>
+			<div class="prof">
+    <span id="texte_anim"></span><span class="curseur_typewriter">|</span>
+</div>
+			<br>
+			<!--different bouton-->
+			<button class="btn_down_cv" onclick="downloadPDF()" >
+				Télécharger mon CV
+			</button>
+			<button class="btn_contact_me" onclick="window.location.href='#contact';">
+				Me contacter
+			</button>
+			<button class="btn_projet" onclick="window.location.href='#projet';" >
+				projet
+			</button>
+		</div>
+
+		<!-- photo a droite-->
+		<div class="rigth_about">
+		<div class="text_haut">
+			Ingenieur de Travaux
+		</div>
+			
+				<img  class="photo_landry" src="./img/photo.jpg" alt="photo_landry" height="300" >
+			
+			<div class="text_bas">
+			Developpeur Junior
+		</div>
+		</div>
+	</div>
+</section>
+<section id="about" class="page-section">
+<div class="titre">À propos</div>
+<div class="about_flex">
+<div class="conteneur_about">
+
+
+	<div class="about_left">
+		<div class="barre_fenetre">
+			<span class="dot dot_rouge"></span>
+			<span class="dot dot_jaune"></span>
+			<span class="dot dot_vert"></span>
+			<span class="nom_fichier">profile.json</span>
+		</div>
+
+		<div class="ligne_json"><span class="cle">"name"</span>: <span class="valeur">"SOME Mwinyel Cheick Landry"</span>,</div>
+		<div class="ligne_json"><span class="cle">"role"</span>: <span class="valeur">"Ingénieur de Travaux"</span>,</div>
+		<div class="ligne_json"><span class="cle">"location"</span>: <span class="valeur">"Ouagadougou/Bobo Dioulasso, Burkina Faso"</span>,</div>
+		<div class="ligne_json">
+			<span class="cle">"specialties"</span>: [
+			<div class="item_liste"><span class="valeur">"Developpement web"</span>,</div>
+			<div class="item_liste"><span class="valeur">"python"</span>,</div>
+			<div class="item_liste"><span class="valeur">"Reseaux et infrastructure"</span></div>
+			],
+		</div>
+		<div class="ligne_json"><span class="cle">"niveau"</span>: <span class="valeur">deuxieme annee — Ingenerie Informatique"</span>,</div>
+		<div class="ligne_json"><span class="cle">"status"</span>: <span class="statut_ok">"Disponible"</span></div>
+
+		<div class="ligne_prompt">$ <span class="curseur">&nbsp;</span></div>
+	</div>
+</div>
+<div class="about_right">
+	<p class="paragraphe">
+		Je suis <span class="gras">SOME Mwinyel Cheick Landry</span>, étudiant en ingénierie informatique spécialisé en 
+		<span class="highlight_vert">Programmation,développement web </span> et 
+		<span class="highlight_bleu">reseaux</span>.
+	</p>
+
+	<p class="paragraphe">
+		Fort d'expériences en Programmation, en configuration d'équipements réseaux ,  administration système Linux
+		et en Developpement web  je combine rigueur et 
+		passion pour concevoir des architectures stables, performantes et optimisées.
+	</p>
+
+	<p class="paragraphe">
+		Actuellement en <span class="gras">deuxième année à l'École Supérieure d'Informatique (ESI)</span> 
+		de l'Université Nazi Boni, j'allie compétences pratiques en programmation et engagement 
+		communautaire pour relever des défis techniques complexes.
+	</p>
+
+	<div class="grille_cartes">
+		<div class="carte_info">
+			<div class="label_carte">Localisation</div>
+			<div class="valeur_carte">Ouagadougou/Bobo-Dioulasso, Burkina Faso</div>
+		</div>
+		<div class="carte_info">
+			<div class="label_carte">Formation</div>
+			<div class="valeur_carte">Ingénierie Informatique — ESI/UNB</div>
+		</div>
+		<div class="carte_info">
+			<div class="label_carte">Téléphone</div>
+			<div class="valeur_carte">(+226) 57-78-84-88</div>
+		</div>
+		<div class="carte_info">
+			<div class="label_carte">Langues</div>
+			<div class="valeur_carte">Français, Anglais, Moore</div>
+		</div>
+	</div>
+</div>
+</div>
+
+</section>
+
+<section id="Competences" class="page-section">
+<div class="titre_comp">Competences</div>
+<div class="conteneur_comp">
+
+	<div class="carte_br">
+		<div class="titre_prog"><i class="fa-solid fa-desktop"></i> Bureautique</div>
+		<ul>
+			<li style="--pct:90%"><i class="fa-solid fa-file-word"></i> Word / Writer <span id="skill_pt">90%</span></li>
+			<li style="--pct:50%"><i class="fa-solid fa-file-excel"></i> Excel <span id="skill_xl">50%</span></li>
+			<li style="--pct:70%"><i class="fa-solid fa-file-powerpoint"></i> Powerpoint <span id="skill_pw">70%</span></li>	
+		</ul>
+	</div>
+
+    <div class="carte_prog">
+        <div class="titre_prog"><i class="fa-solid fa-code"></i> Programmation</div>
+        <ul>
+            <li style="--pct:70%"><i class="fa-solid fa-c"></i> Langage C <span id="skill_C">70%</span></li>
+			<li style="--pct:40%"><i class="fa-solid fa-code"></i> C ++ <span id="skill_Cpp">40%</span></li>
+            <li style="--pct:70%"><i class="fa-brands fa-python"></i> Python <span id="skill_py">70%</span></li>
+            <li style="--pct:50%"><i class="fa-brands fa-java"></i> Java <span id="skill_java">50%</span></li>
+        </ul>
+    </div>
+
+    <div class="carte_dev">
+        <div class="titre_prog"><span class="icone">&lt;/&gt;</span> Développement Web</div>
+        <ul>
+            <li style="--pct:85%"><i class="fa-brands fa-html5"></i> HTML <span id="skill_html">85%</span></li>
+            <li style="--pct:80%"><i class="fa-brands fa-css3-alt"></i> CSS <span id="skill_css">80%</span></li>
+            <li style="--pct:70%"><i class="fa-brands fa-js"></i> JavaScript <span id="skill_js">70%</span></li>
+			<li style="--pct:50%"><i class="fa-brands fa-python"></i> Django <span id="skill_django">50%</span></li>
+            <li style="--pct:50%"><i class="fa-brands fa-php"></i> PHP <span id="skill_php">50%</span></li>
+            <li style="--pct:50%"><i class="fa-brands fa-react"></i> React <span id="skill_react">50%</span></li>
+            <li style="--pct:50%"><i class="fa-brands fa-node-js"></i> NodeJS / API Rest <span id="skill_node">50%</span></li>
+        </ul>
+    </div>
+
+    <div class="carte_bdd">
+        <div class="titre_prog"><i class="fa-solid fa-database"></i> Base de données</div>
+        <ul>
+            <li style="--pct:85%"><i class="fa-solid fa-database"></i> SQL <span id="skill_sql">85%</span></li>
+            <li style="--pct:80%"><i class="fa-solid fa-database"></i> PostgreSQL <span id="skill_psql">80%</span></li>
+            <li style="--pct:70%"><i class="fa-solid fa-envira"></i> MongoDB <span id="skill_mongo">70%</span></li>
+            <li style="--pct:70%"><i class="fa-solid fa-bolt"></i> Supabase <span id="skill_suba">70%</span></li>
+        </ul>
+    </div>
+
+    <div class="carte_rs">
+        <div class="titre_prog"><i class="fa-solid fa-network-wired"></i> Réseaux et Systèmes</div>
+        <ul>
+            <li style="--pct:95%"><i class="fa-solid fa-sitemap"></i> Création réseaux locaux <span id="skill_loc">95%</span></li>
+            <li style="--pct:50%"><i class="fa-solid fa-shield-halved"></i> Sécurisation réseaux <span id="skill_sec">50%</span></li>
+			<li style="--pct:80%"><i class="fa-solid fa-route"></i> Routage IP <span id="skill_rout">80%</span></li>
+			<li style="--pct:70%"><i class="fa-solid fa-server"></i> Serveurs locaux (Apache, Samba) <span id="skill_serv">70%</span></li>
+            <li style="--pct:90%"><i class="fa-brands fa-linux"></i> Admin Linux / Windows <span id="skill_admin">90%</span></li>
+        </ul>
+    </div>
+	
+	<div class="carte_ia">
+        <div class="titre_prog"><i class="fa-solid fa-brain"></i> IA et Data</div>
+        <ul>
+            <li style="--pct:95%"><i class="fa-solid fa-robot"></i> IA prompting <span id="skill_ptia">95%</span></li>
+            <li style="--pct:20%"><i class="fa-solid fa-diagram-project"></i> Machine / Deep Learning <span id="skill_ML">20%</span></li>
+            <li style="--pct:20%"><i class="fa-solid fa-chart-line"></i> Data (Pandas, Numpy) <span id="skill_an_data">20%</span></li>
+			<li style="--pct:50%"><i class="fa-solid fa-eye"></i> Computer Vision (OpenCV) <span id="skill_cv">50%</span></li>
+			<li style="--pct:20%"><i class="fa-solid fa-r"></i> Langage R <span id="skill_R">20%</span></li>
+			<li style="--pct:50%"><i class="fa-solid fa-calculator"></i> MATLAB <span id="skill_MT">50%</span></li>
+        </ul>
+    </div>
+
+</div>
+</section>
+
+<section id="projet">
+<div class="titre_projet">Projets</div>
+<div class="conteneur_projet">
+<div class="projet_1">
+<div class="titre_projet1">Bobo tourisme</div>
+<div class="sous_titre_projet1">Site vitrine </div>
+Projet  visant à concevoir un site vitrine immersif dédié au tourisme à Bobo-Dioulasso. 
+<br>Développé de manière structurée et responsive, <br>
+il met en avant la richesse culturelle de la ville de Sya à travers des 
+<br>galeries multimédias et des sections d'information thématiques.
+<ul>
+	<li>Galerie d'images interactive mettant en valeur le patrimoine</li>
+	<li>Navigation intuitive entre les sections (Accueil, Patrimoine, Réservation d'hôtel)</li>
+	<li>Valorisation culturelle (artisanat, masques traditionnels)</li>
+</ul>
+<!--bouton-->
+<button class="btn_projet1" onclick="window.location.href='lien';">Visiter le Site</button>
+</div>
+
+
+
+<div class="projet_2">
+<div class="titre_projet2">ESI DA Plateform</div>
+<div class="sous_titre_projet1">Site fullstack</div>
+Système complet et centralisé de gestion d'établissement scolaire conçu pour <br>
+automatiser les processus administratifs et pédagogiques. <br>
+La plateforme intègre des fonctionnalités intelligentes pour simplifier le suivi académique, <br>l'évaluation et la planification des cours, 
+<br>offrant une interface performante pour l'ensemble de la communauté éducative.
+<ul>
+	<li>Gestion complète des élèves, enseignants, classes et matières</li>
+    <li>Suivi des notes, des absences et génération automatique des bulletins</li>
+    <li>Planification des emplois du temps avec tableaux de bord selon les rôles utilisateurs</li>
+</ul>
+<!--bouton-->
+<button class="btn_projet1" onclick="window.location.href='https://abastraore.github.io/esi-da-platform/frontend/pages/dashboard.html';">Visiter le Site</button>
+
+</div>
+<div class="projet_3">
+  <div class="titre_projet3">MonCachet</div>
+  <div class="sous_titre_projet3">Application Web de Tamponnage Dynamique de PDF</div>
+  <p>Solution autonome permettant d'apposer automatiquement un cachet personnalisé sur n'importe quel document PDF.</p>
+  <ul>
+    <li>Détourage et traitement d'image dynamique (suppression de fond)</li>
+    <li>Génération et manipulation de fichiers PDF côté serveur avec FPDI</li>
+    <li>Interface épurée axée sur l'expérience utilisateur et l'efficacité</li>
+  </ul>
+  <button class="btn_projet3" onclick="window.location.href='https://cachetl4ndry.free.je';">Voir le projet</button>
+</div>
+
+
+
+<div class="projet_4">
+<div class="titre_projet4">Portfolio</div>
+<div class="sous_titre_projet4">Site vitrine</div>
+Portfolio de développeur conçu pour présenter mon parcours, mes compétences techniques <br>
+et les différents projets que j'ai réalisés.<br>
+Développé avec une approche moderne, responsive et performante, il met en avant <br>
+mon expertise à travers une interface soignée, des animations fluides et une navigation intuitive.
+
+<ul>
+    <li>Présentation de mes projets, compétences et expériences dans une interface moderne</li>
+    <li>Design responsive avec animations interactives et navigation fluide</li>
+    <li>Formulaire de contact et accès direct à mes profils professionnels (GitHub, LinkedIn, CV)</li>
+</ul>
+<!--bouton-->
+<button class="btn_projet1" >Deja sur le site </button>
+</div>
+
+<div class="projet_5">
+<div class="titre_projet5">Control Gestuel</div>
+<div class="sous_titre_projet5">Machine Learning</div>
+Conception d'une IA capable de reconnaître les gestes de la main via la webcam pour traduire instantanément les mouvements en clics et déplacements de souris.<br>
+Le modèle permet de contrôler l'ordinateur et de jouer à un jeu vidéo sans contact, avec une excellente réactivité en temps réel.
+
+<ul>
+  <li>Contrôle de la souris et interaction avec un jeu vidéo en temps réel via la webcam</li>
+  <li>Modèle de Machine Learning entraîné pour classifier les gestes de la main</li>
+  <li>Extraction des landmarks de la main et conversion des coordonnées en actions système</li>
+</ul>
+<!--bouton-->
+<button class="btn_projet1" onclick="window.location.href='https://github.com/Ch3icklandry/souris_virtuel';">Voir Le Projet </button>
+</div>
+</div>
+</div>
+</section>
+
+<section id="xp">
+
+  <h2 class="experience_titre">Expériences</h2>
+
+  <div class="experience_timeline">
+
+    <!-- Chef de Projet Studexus -->
+    <div class="experience_item">
+      <span class="timeline_point vert"></span>
+      <div class="experience_carte">
+        <div class="experience_header">
+          <div>
+            <h3 class="experience_poste">Chef de Projet</h3>
+            <span class="experience_entreprise vert">Studexus(noveau kolektus)</span>
+            <p class="experience_lieu">Plateforme (www.kolektus.com)</p>
+          </div>
+          <div class="experience_meta">
+            <span class="badge vert">Chef de Projet</span>
+            <span class="experience_date">Février 2026 – Mai 2026</span>
+          </div>
+        </div>
+        <ul>
+          <li>Organisation et coordination du projet, répartition des tâches et suivi d'avancement</li>
+          <li>Participation aux décisions techniques pour améliorer la plateforme</li>
+          <li>Contribution active au développement de la plateforme</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Chargé de communication -->
+    <div class="experience_item">
+      <span class="timeline_point cyan"></span>
+      <div class="experience_carte">
+        <div class="experience_header">
+          <div>
+            <h3 class="experience_poste">Adjoint - Chargé de la Communication</h3>
+            <span class="experience_entreprise cyan">Club Génie Logiciel UNB (ESI)</span>
+            <p class="experience_lieu">ESI – Université Nazi Boni</p>
+          </div>
+          <div class="experience_meta">
+            <span class="badge cyan">Bénévolat</span>
+            <span class="experience_date">Mars 2026 – Présent</span>
+          </div>
+        </div>
+        <ul>
+          <li>Gestion de la communication du club</li>
+          <li>Promotion des activités et événements</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Formateur Python -->
+    <div class="experience_item">
+      <span class="timeline_point cyan"></span>
+      <div class="experience_carte">
+        <div class="experience_header">
+          <div>
+            <h3 class="experience_poste">Formateur Python</h3>
+            <span class="experience_entreprise cyan">Club Génie Logiciel UNB (ESI)</span>
+            <p class="experience_lieu">ESI – Université Nazi Boni</p>
+          </div>
+          <div class="experience_meta">
+            <span class="badge cyan">Bénévolat</span>
+            <span class="experience_date">Mars 2026 – Présent</span>
+          </div>
+        </div>
+        <ul>
+          <li>Formation de débutants et d'apprenants avancés au langage Python</li>
+          <li>Couverture des bases et concepts avancés de programmation</li>
+          <li>Accompagnement dans la résolution d'exercices pratiques</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Code Camp 2026 -->
+    <div class="experience_item">
+      <span class="timeline_point violet"></span>
+      <div class="experience_carte">
+        <div class="experience_header">
+          <div>
+            <h3 class="experience_poste">Secrétaire Général – Formateur</h3>
+            <span class="experience_entreprise violet">Code Camp 2026</span>
+            <p class="experience_lieu">ESI – Université Nazi Boni</p>
+          </div>
+          <div class="experience_meta">
+            <span class="badge violet">Bénévolat</span>
+            <span class="experience_date">2026</span>
+          </div>
+        </div>
+        <ul>
+          <li>Animation de conférences dans des lycées de Bobo-Dioulasso</li>
+          <li>Sensibilisation à l'impact du numerique</li>
+          <li>Formation des élèves via le thème "L'Intelligence Artificielle : Ton Allié pour Réussir"</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="formation">
+  <h2 class="formation_titre">Formation & Cursus</h2>
+
+  <div class="formation_liste">
+
+    <!-- ESI -->
+    <div class="formation_item">
+      <div class="formation_contenu">
+        <div class="formation_top">
+          <div>
+            <h3 class="formation_nom">École Supérieure d'Informatique (ESI)</h3>
+            <span class="formation_diplome vert">Ingénierie Informatique</span>
+          </div>
+          <div class="formation_meta">
+            <span class="formation_ecole">Université Nazi Boni – Bobo-Dioulasso</span>
+            <span class="formation_date vert">2024 – présent</span>
+          </div>
+        </div>
+        <p class="formation_desc">
+          Formation d'ingénieur en informatique. Implication active dans la vie associative : 
+          Secrétaire Général et formateur pour Code Camp 2026, chargé de communication 
+          et formateur Python au Club Génie Logiciel UNB.
+        </p>
+        <div class="formation_tags">
+          <span>Programmation</span>
+          <span>Réseaux Informatiques</span>
+          <span>Bases de Données</span>
+          <span>Administration Systèmes</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LPIFO -->
+    <div class="formation_item">
+      <div class="formation_contenu">
+        <div class="formation_top">
+          <div>
+            <h3 class="formation_nom">Lycée Privé International et de Formation</h3>
+            <span class="formation_diplome cyan">LPIFO</span>
+          </div>
+          <div class="formation_meta">
+            <span class="formation_ecole">Ouagadougou</span>
+            <span class="formation_date cyan">2021 – 2021</span>
+          </div>
+        </div>
+        <p class="formation_desc">Poursuite du cursus secondaire.</p>
+      </div>
+    </div>
+
+    <!-- CSSF -->
+    <div class="formation_item">
+      <div class="formation_contenu">
+        <div class="formation_top">
+          <div>
+            <h3 class="formation_nom">Complexe Scolaire Ste Famille</h3>
+            <span class="formation_diplome cyan">CSSF</span>
+          </div>
+          <div class="formation_meta">
+            <span class="formation_ecole">Ouagadougou</span>
+            <span class="formation_date cyan">2019 – 2021</span>
+          </div>
+        </div>
+        <p class="formation_desc">Cycle secondaire, filière scientifique.</p>
+      </div>
+    </div>
+
+    <!-- CMPT -->
+    <div class="formation_item">
+      <div class="formation_contenu">
+        <div class="formation_top">
+          <div>
+            <h3 class="formation_nom">Collège Moderne Privé de Toussiana</h3>
+            <span class="formation_diplome violet">CMPT</span>
+          </div>
+          <div class="formation_meta">
+            <span class="formation_ecole">Toussiana</span>
+            <span class="formation_date violet">2017 – 2019</span>
+          </div>
+        </div>
+        <p class="formation_desc">Début du cycle secondaire.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="certification">
+  <h2 class="certification_titre">Certifications</h2>
+
+  <div class="certification_grille">
+
+    <!-- ==================== PROGRAMMATION / DÉVELOPPEMENT ==================== -->
+    <h3 class="certif_categorie_title" style="grid-column: 1 / -1; color: #00cfff; margin: 20px 0 10px; font-family: 'Courier New', monospace;">
+      <i class="fa-solid fa-code"></i> Programmation & Développement
+    </h3>
+
+    <!-- freeCodeCamp Python -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert4.png" alt="Certificat freeCodeCamp Python">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom cyan">Python Developer Certification</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> freeCodeCamp</p>
+        <p class="certif_meta"><strong>Date :</strong> 25 Février 2026</p>
+        <p class="certif_desc">
+          Certification Python représentant environ 300 heures de travail : structures de données, POO et scripts pratiques.
+        </p>
+        <button class="certif_btn cyan" onclick="openModal('Python Developer Certification', 'Certification Python représentant environ 300 heures de travail : structures de données, POO et scripts pratiques.', 'certificats/cert4.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- freeCodeCamp Responsive Web Developer -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert10.png" alt="Certificat freeCodeCamp Web Developer">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom cyan">Responsive Web Developer</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> freeCodeCamp</p>
+        <p class="certif_meta"><strong>Date :</strong> 5 Août 2026</p>
+        <p class="certif_desc">
+          Certification sur le développement web représentant environ 300 heures de travail : HTML, CSS...
+        </p>
+        <button class="certif_btn cyan" onclick="openModal('Responsive Web Developer', 'Certification sur le développement web représentant environ 300 heures de travail : HTML, CSS...', 'certificats/cert10.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- Meta - Back-End Development -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert11.png" alt="Certificat Meta Back-End">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom cyan">Introduction to Back-End Development</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> Meta - Coursera</p>
+        <p class="certif_meta"><strong>Date :</strong> 17 Août 2026</p>
+        <p class="certif_desc">
+          Bases fondamentales de l'architecture serveur, des API et du développement Web Back-End.
+        </p>
+        <button class="certif_btn cyan" onclick="openModal('Introduction to Back-End Development', 'Bases fondamentales de l\'architecture serveur, des API et du développement Web Back-End.', 'certificats/cert11.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- CS50 SQL -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert5.png" alt="Certificat CS50 Introduction to Databases with SQL">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom cyan">Introduction to Databases with SQL</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> Harvard University (CS50)</p>
+        <p class="certif_meta"><strong>Date :</strong> 04 Avril 2026</p>
+        <p class="certif_desc">
+          Sept problem sets et un projet final couvrant la modélisation de bases de données et le langage SQL.
+        </p>
+        <button class="certif_btn cyan" onclick="openModal('Introduction to Databases with SQL', 'Sept problem sets et un projet final couvrant la modélisation de bases de données et le langage SQL.', 'certificats/cert5.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ==================== RÉSEAUX ==================== -->
+    <h3 class="certif_categorie_title" style="grid-column: 1 / -1; color: #00ff88; margin: 30px 0 10px; font-family: 'Courier New', monospace;">
+      <i class="fa-solid fa-network-wired"></i> Réseaux & IoT
+    </h3>
+
+    <!-- Cisco - Équipements réseau -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert1.png" alt="Certificat Cisco Équipements réseau">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom vert">Équipements réseau et Configuration de base</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> Cisco Networking Academy</p>
+        <p class="certif_meta"><strong>Date :</strong> 02 Avril 2026</p>
+        <p class="certif_desc">
+          Configuration de base des équipements réseau : routeurs, switchs et paramétrage initial d'une infrastructure.
+        </p>
+        <button class="certif_btn vert" onclick="openModal('Équipements réseau et Configuration de base', 'Configuration de base des équipements réseau : routeurs, switchs et paramétrage initial d\'une infrastructure.', 'certificats/cert1.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- Cisco - Notions de base sur les réseaux -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert2.png" alt="Certificat Cisco Notions de base réseaux">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom vert">Notions de base sur les réseaux</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> Cisco Networking Academy</p>
+        <p class="certif_meta"><strong>Date :</strong> 15 Janvier 2026</p>
+        <p class="certif_desc">
+          Fondamentaux des réseaux informatiques : modèles OSI/TCP-IP, adressage IP et principes de communication.
+        </p>
+        <button class="certif_btn vert" onclick="openModal('Notions de base sur les réseaux', 'Fondamentaux des réseaux informatiques : modèles OSI/TCP-IP, adressage IP et principes de communication.', 'certificats/cert2.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- Cisco - IoT -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert3.png" alt="Certificat Cisco IoT">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom vert">Introduction à l'IoT (IdO) et à la transformation digitale</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> Cisco Networking Academy</p>
+        <p class="certif_meta"><strong>Date :</strong> 27 Décembre 2025</p>
+        <p class="certif_desc">
+          Concepts fondamentaux de l'Internet des Objets et impact de la transformation digitale sur les industries.
+        </p>
+        <button class="certif_btn vert" onclick="openModal('Introduction à l\'IoT (IdO) et à la transformation digitale', 'Concepts fondamentaux de l\'Internet des Objets et impact de la transformation digitale sur les industries.', 'certificats/cert3.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ==================== SYSTÈME ==================== -->
+    <h3 class="certif_categorie_title" style="grid-column: 1 / -1; color: #ff4d4d; margin: 30px 0 10px; font-family: 'Courier New', monospace;">
+      <i class="fa-brands fa-linux"></i> Systèmes & Administration
+    </h3>
+
+    <!-- Linux Foundation -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert8.png" alt="Certificat Linux for Developer - The Linux Foundation">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom rouge">Linux for Developer</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> The Linux Foundation - Coursera</p>
+        <p class="certif_meta"><strong>Date :</strong> 9 Août 2026</p>
+        <p class="certif_desc">
+          Formation sur l'administration et l'utilisation des systèmes d'exploitation Linux.
+        </p>
+        <button class="certif_btn rouge" onclick="openModal('Linux for Developer', 'Formation sur l\'administration et l\'utilisation des systèmes d\'exploitation Linux.', 'certificats/cert8.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ==================== DATA & AI ==================== -->
+    <h3 class="certif_categorie_title" style="grid-column: 1 / -1; color: #a78bfa; margin: 30px 0 10px; font-family: 'Courier New', monospace;">
+      <i class="fa-solid fa-brain"></i> Data & Intelligence Artificielle
+    </h3>
+
+    <!-- Cisco - IA Moderne -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert9.png" alt="Certificat Cisco IA">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom violet">Introduction à l'IA moderne</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> Cisco Networking Academy</p>
+        <p class="certif_meta"><strong>Date :</strong> 8 Août 2026</p>
+        <p class="certif_desc">
+          Formation sur les principes et applications de l'IA moderne.
+        </p>
+        <button class="certif_btn violet" onclick="openModal('Introduction à l\'IA moderne', 'Formation sur les principes et applications de l\'IA moderne.', 'certificats/cert9.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- Coursiv - DeepSeek -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert6.png" alt="Certificat Coursiv DeepSeek">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom violet">Maître en DeepSeek</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> Coursiv</p>
+        <p class="certif_meta"><strong>Date :</strong> 6 Juin 2026</p>
+        <p class="certif_desc">
+          Formation approfondie de 5 heures sur l'utilisation avancée de l'IA DeepSeek pour la productivité.
+        </p>
+        <button class="certif_btn violet" onclick="openModal('Maître en DeepSeek', 'Formation approfondie de 5 heures sur l\'utilisation avancée de l\'IA DeepSeek pour la productivité.', 'certificats/cert6.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- Coursiv - Lovable -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert7.png" alt="Certificat Coursiv Lovable">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom violet">Maître en Lovable</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> Coursiv</p>
+        <p class="certif_meta"><strong>Date :</strong> 6 Juin 2026</p>
+        <p class="certif_desc">
+          Formation de 4 heures sur l'outil Lovable pour la création rapide d'applications par IA générative.
+        </p>
+        <button class="certif_btn violet" onclick="openModal('Maître en Lovable', 'Formation de 4 heures sur l\'outil Lovable pour la création rapide d\'applications par IA générative.', 'certificats/cert7.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ==================== SOFT SKILLS ==================== -->
+    <h3 class="certif_categorie_title" style="grid-column: 1 / -1; color: #f1e05a; margin: 30px 0 10px; font-family: 'Courier New', monospace;">
+      <i class="fa-solid fa-user-gear"></i> Soft Skills & Autres
+    </h3>
+
+    <!-- Passeport numérique -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/cert.png" alt="Passeport numérique">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom jaune">Passeport numérique 10.000 Codeurs</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> 10.000 Codeurs</p>
+        <p class="certif_meta"><strong>Date :</strong> 06 Juin 2026</p>
+        <p class="certif_desc">
+          Connaissances sur le numérique, Soft Skills et Anglais professionnel.
+        </p>
+        <button class="certif_btn jaune" onclick="openModal('Passeport numérique 10.000 Codeurs', 'Connaissances sur le numérique, Soft Skills et Anglais professionnel.', 'certificats/cert0.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- Code Battle -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/codebattle.jpg" alt="code battle">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom jaune">Finaliste Code Battle 2026</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> CIE - EPO</p>
+        <p class="certif_meta"><strong>Date :</strong> Juin 2026</p>
+        <p class="certif_desc">
+          Participant et finaliste du hackathon Code Battle 2026.
+        </p>
+        <button class="certif_btn jaune" onclick="openModal('Finaliste Code Battle 2026', 'Participant et finaliste du hackathon Code Battle 2026.', 'certificats/codebattle.jpg')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+    <!-- BETF -->
+    <div class="certif_card">
+      <div class="certif_image">
+        <img src="certificats/BETF.png" alt="BETF">
+      </div>
+      <div class="certif_body">
+        <h3 class="certif_nom jaune">Participant BURKINA EMERGING TECH FORUM 2026</h3>
+        <p class="certif_meta"><strong>Organisation :</strong> MLG Learning</p>
+        <p class="certif_meta"><strong>Date :</strong> Mai 2026</p>
+        <p class="certif_desc">
+          Participant au Burkina Emerging Tech Forum 2026.
+        </p>
+        <button class="certif_btn jaune" onclick="openModal('Participant BURKINA EMERGING TECH FORUM 2026', 'Participant au Burkina Emerging Tech Forum 2026.', 'certificats/BETF.png')">
+          <span class="certif_dot"></span> Voir le Certificat
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="contact_section" id="contact">
+  <h2 class="contact_titre">Contact</h2>
+
+  <div class="contact_grille">
+
+    <!-- Colonne gauche : texte + liens -->
+    <div class="contact_gauche">
+      <p class="contact_texte">
+        Vous avez un projet , une application à développer, ou vous souhaitez simplement échanger ? 
+        Je suis disponible et ouvert à toute opportunité de collaboration.
+      </p>
+
+      <div class="contact_liens">
+        <a href="https://github.com/Ch3icklandry" target="_blank" class="contact_lien">
+          <span class="contact_lien_gauche">
+            <svg class="contact_icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.4 9.4 0 0112 6.8c.85 0 1.71.12 2.5.34 1.9-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"/>
+            </svg>
+            GitHub
+          </span>
+          <span class="contact_arrow">›</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/mwinyel-cheick-landry-s-891092329?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="contact_lien">
+          <span class="contact_lien_gauche">
+            <svg class="contact_icon icon_linkedin" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18v-8.4H5.67V18h2.67zM7 8.42a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zM18.33 18v-4.6c0-2.46-1.31-3.6-3.06-3.6a2.64 2.64 0 00-2.39 1.32h-.04V9.6h-2.56c.03.72 0 8.4 0 8.4h2.56v-4.69c0-.25.02-.5.1-.68.2-.5.66-1.02 1.44-1.02 1.02 0 1.43.78 1.43 1.92V18h2.52z"/>
+            </svg>
+            LinkedIn
+          </span>
+          <span class="contact_arrow">›</span>
+        </a>
+
+        <a href="mailto:mwinyelcheicklandrysome@gmail.com" class="contact_lien">
+          <span class="contact_lien_gauche">
+            <svg class="contact_icon icon_email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16v16H4z" opacity="0"></path>
+              <path d="M22 6l-10 7L2 6"></path>
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            </svg>
+            Email
+          </span>
+          <span class="contact_arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Colonne droite : formulaire -->
+    <form class="contact_formulaire" action="https://formsubmit.co/mwinyelcheicklandrysome@gmail.com" method="POST">
+      <div class="champ_groupe">
+        <label for="nom">Nom <span class="highlight_vert">*</span></label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+      </div>
+
+      <div class="champ_groupe">
+        <label for="email">Email <span class="highlight_vert">*</span></label>
+        <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+      </div>
+
+      <div class="champ_groupe">
+        <label for="sujet">Sujet</label>
+        <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message">
+      </div>
+
+      <div class="champ_groupe">
+        <label for="message">Message <span class="highlight_vert">*</span></label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn_envoyer">
+        Envoyer le message
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer_section">
+  <div class="footer_nom">SOME Mwinyel Cheick Landry</div>
+</footer>
+
+<!-- Ecran Bloqué / Modal Anomalie -->
+<div class="ecran_bloque" id="ecranBloque">
+  <div>
+    <h2>Anomalie détectée</h2>
+    <p>Accès restreint aux fonctionnalités de la page.</p>
+  </div>
+</div>
+
+<!-- Lightbox pour les certificats -->
+<div class="lightbox_overlay" id="lightboxOverlay">
+  <img src="" alt="Aperçu du certificat" id="lightboxImage" class="lightbox_image">
+</div>
+
+<!-- Bouton retour en haut -->
+<button id="backToTop" class="back_to_top" aria-label="Retour en haut" title="Retour en haut">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+<!-- Modale Certificat -->
+<div id="certifModal" class="modal_overlay" onclick="closeModal(event)">
+  <div class="modal_content">
+    <button class="modal_close" onclick="closeModalForce()">&times;</button>
+    <h3 id="modalTitle" class="modal_title"></h3>
+    <p id="modalDesc" class="modal_desc"></p>
+    <div class="modal_img_wrapper">
+      <img id="modalImg" src="" alt="Certificat Grand Format">
+    </div>
+  </div>
+</div>
+<script src="index.js"></script>
+<script src="data-loader.js"></script>
+
+</body>
+</html>

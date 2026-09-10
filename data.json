@@ -1,0 +1,545 @@
+{
+    "identite": {
+        "nom": "Landry",
+        "logo": "img\/logo.png"
+    },
+    "hero": {
+        "nom1": "SOME",
+        "nom2": "Mwinyel",
+        "nom3": "Cheick",
+        "nom4": "Landry",
+        "texte_haut": "Ingenieur de Travaux",
+        "texte_bas": "Developpeur Junior",
+        "phrases": [
+            "Ingénieur de Travaux en Systèmes d'Information",
+            "Développeur Junior",
+            "Passionné d'Intelligence Artificielle, de Programmation et de Réseaux"
+        ],
+        "photo": "img\/photo.jpg"
+    },
+    "contact": {
+        "texte": "Vous avez un projet, une application à développer, ou vous souhaitez simplement échanger ? Je suis disponible et ouvert à toute opportunité de collaboration.",
+        "github": "https:\/\/github.com\/Ch3icklandry",
+        "linkedin": "https:\/\/www.linkedin.com\/in\/mwinyel-cheick-landry-s-891092329",
+        "email": "mwinyelcheicklandrysome@gmail.com"
+    },
+    "competences": [
+        {
+            "categorie": "Bureautique",
+            "classe": "carte_br",
+            "icone_categorie": "fa-solid fa-desktop",
+            "items": [
+                {
+                    "icone": "fa-solid fa-file-word",
+                    "nom": "Word \/ Writer",
+                    "pourcentage": 90
+                },
+                {
+                    "icone": "fa-solid fa-file-excel",
+                    "nom": "Excel",
+                    "pourcentage": 50
+                },
+                {
+                    "icone": "fa-solid fa-file-powerpoint",
+                    "nom": "Powerpoint",
+                    "pourcentage": 70
+                }
+            ]
+        },
+        {
+            "categorie": "Programmation",
+            "classe": "carte_prog",
+            "icone_categorie": "fa-solid fa-code",
+            "items": [
+                {
+                    "icone": "fa-solid fa-c",
+                    "nom": "Langage C",
+                    "pourcentage": 70
+                },
+                {
+                    "icone": "fa-solid fa-code",
+                    "nom": "C ++",
+                    "pourcentage": 40
+                },
+                {
+                    "icone": "fa-brands fa-python",
+                    "nom": "Python",
+                    "pourcentage": 70
+                },
+                {
+                    "icone": "fa-brands fa-java",
+                    "nom": "Java",
+                    "pourcentage": 50
+                }
+            ]
+        },
+        {
+            "categorie": "Développement Web",
+            "classe": "carte_dev",
+            "icone_categorie": "",
+            "items": [
+                {
+                    "icone": "fa-brands fa-html5",
+                    "nom": "HTML",
+                    "pourcentage": 85
+                },
+                {
+                    "icone": "fa-brands fa-css3-alt",
+                    "nom": "CSS",
+                    "pourcentage": 80
+                },
+                {
+                    "icone": "fa-brands fa-js",
+                    "nom": "JavaScript",
+                    "pourcentage": 70
+                },
+                {
+                    "icone": "fa-brands fa-python",
+                    "nom": "Django",
+                    "pourcentage": 50
+                },
+                {
+                    "icone": "fa-brands fa-php",
+                    "nom": "PHP",
+                    "pourcentage": 50
+                },
+                {
+                    "icone": "fa-brands fa-react",
+                    "nom": "React",
+                    "pourcentage": 50
+                },
+                {
+                    "icone": "fa-brands fa-node-js",
+                    "nom": "NodeJS \/ API Rest",
+                    "pourcentage": 50
+                }
+            ]
+        },
+        {
+            "categorie": "Base de données",
+            "classe": "carte_bdd",
+            "icone_categorie": "fa-solid fa-database",
+            "items": [
+                {
+                    "icone": "fa-solid fa-database",
+                    "nom": "SQL",
+                    "pourcentage": 85
+                },
+                {
+                    "icone": "fa-solid fa-database",
+                    "nom": "PostgreSQL",
+                    "pourcentage": 80
+                },
+                {
+                    "icone": "fa-solid fa-envira",
+                    "nom": "MongoDB",
+                    "pourcentage": 70
+                },
+                {
+                    "icone": "fa-solid fa-bolt",
+                    "nom": "Supabase",
+                    "pourcentage": 70
+                }
+            ]
+        },
+        {
+            "categorie": "Réseaux et Systèmes",
+            "classe": "carte_rs",
+            "icone_categorie": "fa-solid fa-network-wired",
+            "items": [
+                {
+                    "icone": "fa-solid fa-sitemap",
+                    "nom": "Création réseaux locaux",
+                    "pourcentage": 95
+                },
+                {
+                    "icone": "fa-solid fa-shield-halved",
+                    "nom": "Sécurisation réseaux",
+                    "pourcentage": 50
+                },
+                {
+                    "icone": "fa-solid fa-route",
+                    "nom": "Routage IP",
+                    "pourcentage": 80
+                },
+                {
+                    "icone": "fa-solid fa-server",
+                    "nom": "Serveurs locaux (Apache, Samba)",
+                    "pourcentage": 70
+                },
+                {
+                    "icone": "fa-brands fa-linux",
+                    "nom": "Admin Linux \/ Windows",
+                    "pourcentage": 90
+                }
+            ]
+        },
+        {
+            "categorie": "IA et Data",
+            "classe": "carte_ia",
+            "icone_categorie": "fa-solid fa-brain",
+            "items": [
+                {
+                    "icone": "fa-solid fa-robot",
+                    "nom": "IA prompting",
+                    "pourcentage": 95
+                },
+                {
+                    "icone": "fa-solid fa-diagram-project",
+                    "nom": "Machine \/ Deep Learning",
+                    "pourcentage": 40
+                },
+                {
+                    "icone": "fa-solid fa-chart-line",
+                    "nom": "Data (Pandas, Numpy)",
+                    "pourcentage": 20
+                },
+                {
+                    "icone": "fa-solid fa-eye",
+                    "nom": "Computer Vision (OpenCV)",
+                    "pourcentage": 50
+                },
+                {
+                    "icone": "fa-solid fa-r",
+                    "nom": "Langage R",
+                    "pourcentage": 20
+                },
+                {
+                    "icone": "fa-solid fa-calculator",
+                    "nom": "MATLAB",
+                    "pourcentage": 50
+                }
+            ]
+        }
+    ],
+    "projets": [
+        {
+            "titre": "Bobo tourisme",
+            "sous_titre": "Site vitrine",
+            "description": "Projet visant à concevoir un site vitrine immersif dédié au tourisme à Bobo-Dioulasso. Développé de manière structurée et responsive, il met en avant la richesse culturelle de la ville de Sya à travers des galeries multimédias et des sections d'information thématiques.",
+            "taches": [
+                "Galerie d'images interactive mettant en valeur le patrimoine",
+                "Navigation intuitive entre les sections (Accueil, Patrimoine, Réservation d'hôtel)",
+                "Valorisation culturelle (artisanat, masques traditionnels)"
+            ],
+            "bouton_texte": "Visiter le Site",
+            "lien": "https:\/\/ch3icklandry.github.io\/bobo_tourisme\/"
+        },
+        {
+            "titre": "ESI DA Plateform",
+            "sous_titre": "Site fullstack",
+            "description": "Système complet et centralisé de gestion d'établissement scolaire conçu pour automatiser les processus administratifs et pédagogiques.",
+            "taches": [
+                "Gestion complète des élèves, enseignants, classes et matières",
+                "Suivi des notes, des absences et génération automatique des bulletins",
+                "Planification des emplois du temps avec tableaux de bord selon les rôles utilisateurs"
+            ],
+            "bouton_texte": "Visiter le Site",
+            "lien": "https:\/\/abastraore.github.io\/esi-da-platform\/frontend\/pages\/dashboard.html"
+        },
+        {
+            "titre": "MonCachet",
+            "sous_titre": "Application Web de Tamponnage Dynamique de PDF",
+            "description": "Solution autonome permettant d'apposer automatiquement un cachet personnalisé sur n'importe quel document PDF.",
+            "taches": [
+                "Détourage et traitement d'image dynamique (suppression de fond)",
+                "Génération et manipulation de fichiers PDF côté serveur avec FPDI",
+                "Interface épurée axée sur l'expérience utilisateur et l'efficacité"
+            ],
+            "bouton_texte": "Voir le projet",
+            "lien": "https:\/\/cachetl4ndry.free.je"
+        },
+        {
+            "titre": "Portfolio",
+            "sous_titre": "Site vitrine",
+            "description": "Portfolio de développeur conçu pour présenter mon parcours, mes compétences techniques et les différents projets que j'ai réalisés.",
+            "taches": [
+                "Présentation de mes projets, compétences et expériences dans une interface moderne",
+                "Design responsive avec animations interactives et navigation fluide",
+                "Formulaire de contact et accès direct à mes profils professionnels"
+            ],
+            "bouton_texte": "Deja sur le site",
+            "lien": "#"
+        },
+        {
+            "titre": "Control Gestuel",
+            "sous_titre": "Machine Learning",
+            "description": "Conception d'une IA capable de reconnaître les gestes de la main via la webcam pour traduire instantanément les mouvements en clics et déplacements de souris.",
+            "taches": [
+                "Contrôle de la souris et interaction avec un jeu vidéo en temps réel via la webcam",
+                "Modèle de Machine Learning entraîné pour classifier les gestes de la main",
+                "Extraction des landmarks de la main et conversion des coordonnées en actions système"
+            ],
+            "bouton_texte": "Voir Le Projet",
+            "lien": "https:\/\/github.com\/Ch3icklandry\/souris_virtuel"
+        },
+        {
+            "titre": "Myportfolio",
+            "sous_titre": "projet Personel",
+            "description": "Application web interactive permettant d'automatiser la création de portfolios professionnels pour développeurs et étudiants. L'utilisateur choisit un modèle pré-conçu, personnalise ses informations (bio, projets, compétences) via une interface dynamique, puis télécharge directement l'archive .zip de son site prêt à l'emploi.",
+            "taches": [
+                "Galerie de templates responsives et modulaires.",
+                "Éditeur dynamique avec aperçu en temps réel.",
+                "Génération et export d'archives .zip autonomes (HTML\/CSS\/JS).",
+                "Guide pas à pas pour le déploiement sur GitHub Pages, Netlify et Vercel.",
+                "Chatbot au cas ou il ya des question"
+            ],
+            "bouton_texte": "En Cours",
+            "lien": "#"
+        },
+        {
+            "titre": "Kolektus",
+            "sous_titre": "Projet Collectif",
+            "description": "réseau social académique et d'un campus numérique connectant les étudiants, facilitant le partage de ressources et la mise en valeur des compétences techniques.",
+            "taches": [
+                "Écosystème collaboratif permettant l'échange de ressources pédagogiques et la coordination sur des projets inter-établissements",
+                "Vitrine de compétences et portfolio virtuel intégrés pour exposer les réalisations étudiantes auprès des recruteurs",
+                "Plateforme multi-support (Web et Mobile) pensée pour centraliser la vie académique et fluidifier les interactions étudiantes"
+            ],
+            "bouton_texte": "Voir le projet",
+            "lien": "kolektus.com"
+        }
+    ],
+    "experiences": [
+        {
+            "poste": "Chef de Projet",
+            "entreprise": "Studexus (nouveau kolektus)",
+            "lieu": "Plateforme (www.kolektus.com)",
+            "badge": "Chef de Projet",
+            "date": "Février 2026 – Mai 2026",
+            "couleur": "vert",
+            "taches": [
+                "Organisation et coordination du projet, répartition des tâches et suivi d'avancement",
+                "Participation aux décisions techniques pour améliorer la plateforme",
+                "Contribution active au développement de la plateforme"
+            ]
+        },
+        {
+            "poste": "Adjoint - Chargé de la Communication",
+            "entreprise": "Club Génie Logiciel UNB (ESI)",
+            "lieu": "ESI – Université Nazi Boni",
+            "badge": "Bénévolat",
+            "date": "Mars 2026 – Présent",
+            "couleur": "cyan",
+            "taches": [
+                "Gestion de la communication du club",
+                "Promotion des activités et événements"
+            ]
+        },
+        {
+            "poste": "Formateur Python",
+            "entreprise": "Club Génie Logiciel UNB (ESI)",
+            "lieu": "ESI – Université Nazi Boni",
+            "badge": "Bénévolat",
+            "date": "Mars 2026 – Présent",
+            "couleur": "cyan",
+            "taches": [
+                "Formation de débutants et d'apprenants avancés au langage Python",
+                "Couverture des bases et concepts avancés de programmation",
+                "Accompagnement dans la résolution d'exercices pratiques"
+            ]
+        },
+        {
+            "poste": "Secrétaire Général – Formateur",
+            "entreprise": "Code Camp 2026",
+            "lieu": "ESI – Université Nazi Boni",
+            "badge": "Bénévolat",
+            "date": "2026",
+            "couleur": "violet",
+            "taches": [
+                "Animation de conférences dans des lycées de Bobo-Dioulasso",
+                "Sensibilisation à l'impact du numerique",
+                "Formation des élèves via le thème \"L'Intelligence Artificielle : Ton Allié pour Réussir\""
+            ]
+        }
+    ],
+    "formations": [
+        {
+            "nom": "École Supérieure d'Informatique (ESI)",
+            "diplome": "Ingénierie Informatique",
+            "ecole": "Université Nazi Boni – Bobo-Dioulasso",
+            "date": "2024 – présent",
+            "couleur": "vert",
+            "desc": "Formation d'ingénieur en informatique. Implication active dans la vie associative : Secrétaire Général et formateur pour Code Camp 2026, chargé de communication et formateur Python au Club Génie Logiciel UNB.",
+            "tags": [
+                "Programmation",
+                "Réseaux Informatiques",
+                "Bases de Données",
+                "Administration Systèmes"
+            ]
+        },
+        {
+            "nom": "Lycée Privé International et de Formation",
+            "diplome": "LPIFO",
+            "ecole": "Ouagadougou",
+            "date": "2021 – 2021",
+            "couleur": "cyan",
+            "desc": "Poursuite du cursus secondaire.",
+            "tags": []
+        },
+        {
+            "nom": "Complexe Scolaire Ste Famille",
+            "diplome": "CSSF",
+            "ecole": "Ouagadougou",
+            "date": "2019 – 2021",
+            "couleur": "cyan",
+            "desc": "Cycle secondaire, filière scientifique.",
+            "tags": []
+        },
+        {
+            "nom": "Collège Moderne Privé de Toussiana",
+            "diplome": "CMPT",
+            "ecole": "Toussiana",
+            "date": "2017 – 2019",
+            "couleur": "violet",
+            "desc": "Début du cycle secondaire.",
+            "tags": []
+        }
+    ],
+    "certifications": [
+        {
+            "categorie": "Programmation & Développement",
+            "nom": "Python Developer Certification",
+            "organisation": "freeCodeCamp",
+            "date": "25 Février 2026",
+            "couleur": "cyan",
+            "desc": "Certification Python représentant environ 300 heures de travail : structures de données, POO et scripts pratiques.",
+            "image": "certificats\/cert4.png"
+        },
+        {
+            "categorie": "Programmation & Développement",
+            "nom": "Responsive Web Developer",
+            "organisation": "freeCodeCamp",
+            "date": "5 Août 2026",
+            "couleur": "cyan",
+            "desc": "Certification sur le développement web représentant environ 300 heures de travail : HTML, CSS...",
+            "image": "certificats\/cert10.png"
+        },
+        {
+            "categorie": "Programmation & Développement",
+            "nom": "Introduction to Back-End Development",
+            "organisation": "Meta - Coursera",
+            "date": "17 Août 2026",
+            "couleur": "cyan",
+            "desc": "Bases fondamentales de l'architecture serveur, des API et du développement Web Back-End.",
+            "image": "certificats\/cert11.png"
+        },
+        {
+            "categorie": "Programmation & Développement",
+            "nom": "Introduction to Databases with SQL",
+            "organisation": "Harvard University (CS50)",
+            "date": "04 Avril 2026",
+            "couleur": "cyan",
+            "desc": "Sept problem sets et un projet final couvrant la modélisation de bases de données et le langage SQL.",
+            "image": "certificats\/cert5.png"
+        },
+        {
+            "categorie": "Réseaux & IoT",
+            "nom": "Équipements réseau et Configuration de base",
+            "organisation": "Cisco Networking Academy",
+            "date": "02 Avril 2026",
+            "couleur": "vert",
+            "desc": "Configuration de base des équipements réseau : routeurs, switchs et paramétrage initial d'une infrastructure.",
+            "image": "certificats\/cert1.png"
+        },
+        {
+            "categorie": "Réseaux & IoT",
+            "nom": "Notions de base sur les réseaux",
+            "organisation": "Cisco Networking Academy",
+            "date": "15 Janvier 2026",
+            "couleur": "vert",
+            "desc": "Fondamentaux des réseaux informatiques : modèles OSI\/TCP-IP, adressage IP et principes de communication.",
+            "image": "certificats\/cert2.png"
+        },
+        {
+            "categorie": "Réseaux & IoT",
+            "nom": "Introduction à l'IoT (IdO) et à la transformation digitale",
+            "organisation": "Cisco Networking Academy",
+            "date": "27 Décembre 2025",
+            "couleur": "vert",
+            "desc": "Concepts fondamentaux de l'Internet des Objets et impact de la transformation digitale sur les industries.",
+            "image": "certificats\/cert3.png"
+        },
+        {
+            "categorie": "Systèmes & Administration",
+            "nom": "Linux for Developer",
+            "organisation": "The Linux Foundation - Coursera",
+            "date": "9 Août 2026",
+            "couleur": "rouge",
+            "desc": "Formation sur l'administration et l'utilisation des systèmes d'exploitation Linux.",
+            "image": "certificats\/cert8.png"
+        },
+        {
+            "categorie": "Data & Intelligence Artificielle",
+            "nom": "Introduction à l'IA moderne",
+            "organisation": "Cisco Networking Academy",
+            "date": "8 Août 2026",
+            "couleur": "violet",
+            "desc": "Formation sur les principes et applications de l'IA moderne.",
+            "image": "certificats\/cert9.png"
+        },
+        {
+            "categorie": "Data & Intelligence Artificielle",
+            "nom": "Maître en DeepSeek",
+            "organisation": "Coursiv",
+            "date": "6 Juin 2026",
+            "couleur": "violet",
+            "desc": "Formation approfondie de 5 heures sur l'utilisation avancée de l'IA DeepSeek pour la productivité.",
+            "image": "certificats\/cert6.png"
+        },
+        {
+            "categorie": "Data & Intelligence Artificielle",
+            "nom": "Maître en Lovable",
+            "organisation": "Coursiv",
+            "date": "6 Juin 2026",
+            "couleur": "violet",
+            "desc": "Formation de 4 heures sur l'outil Lovable pour la création rapide d'applications par IA générative.",
+            "image": "certificats\/cert7.png"
+        },
+        {
+            "categorie": "Soft Skills & Autres",
+            "nom": "Passeport numérique 10.000 Codeurs",
+            "organisation": "10.000 Codeurs",
+            "date": "06 Juin 2026",
+            "couleur": "jaune",
+            "desc": "Connaissances sur le numérique, Soft Skills et Anglais professionnel.",
+            "image": "certificats\/cert.png"
+        },
+        {
+            "categorie": "Soft Skills & Autres",
+            "nom": "Finaliste Code Battle 2026",
+            "organisation": "CIE - EPO",
+            "date": "Juin 2026",
+            "couleur": "jaune",
+            "desc": "Participant et finaliste du hackathon Code Battle 2026.",
+            "image": "certificats\/codebattle.jpg"
+        },
+        {
+            "categorie": "Soft Skills & Autres",
+            "nom": "Participant BURKINA EMERGING TECH FORUM 2026",
+            "organisation": "MLG Learning",
+            "date": "Mai 2026",
+            "couleur": "jaune",
+            "desc": "Participant au Burkina Emerging Tech Forum 2026.",
+            "image": "certificats\/BETF.png"
+        },
+        {
+            "categorie": "Data & Intelligence Artificielle",
+            "nom": "CS50's Introduction to Artificial Intelligence with Python",
+            "organisation": "CS50 Harvard",
+            "date": "Aout 2026",
+            "couleur": "violet",
+            "desc": "fondements et applications de l'IA à travers 12 projets pratiques en Python : algorithmes de recherche, logique propositionnelle, apprentissage automatique, réseaux de neurones et traitement du langage naturel",
+            "image": "certificats\/cert_6aa065ae77876.png"
+        },
+        {
+            "categorie": "Réseaux & IoT",
+            "nom": "Introduction a la cybersecurite",
+            "organisation": "Cisco Networking Academy",
+            "date": "Aout 2026",
+            "couleur": "vert",
+            "desc": "principes fondamentaux de la sécurité informatique, identification des menaces courantes, confidentialité des données et bonnes pratiques de défense en ligne.",
+            "image": "certificats\/cert_6aa065babb8be.jpeg"
+        }
+    ]
+}
